@@ -4,7 +4,7 @@ python:
 install:
   - pip install -r exam/requirements.txt
 script:
-  - python exam/exam/manage.py test // заменить
+  - python exam/exam/manage.py test 
 
 deploy:
   provider: heroku
@@ -14,6 +14,6 @@ deploy:
   on:
     repo: DaryaZvyagina/Python_exam 
   run:
-    - 'python exam/exam/manage.py makemigrations' // за
-    - 'python exam/exam/manage.py migrate'. // ме
-    - 'python exam/exam/manage.py runserver' // нить
+    - 'python exam/exam/manage.py makemigrations' 
+    - 'python exam/exam/manage.py migrate'. 
+    - 'python exam/exam/manage.py runserver' 

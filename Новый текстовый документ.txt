@@ -1,0 +1,19 @@
+language: python
+python:
+  - "3.6"
+install:
+  - pip install -r src/requirements.txt
+script:
+  - python src/blog_api/manage.py test // заменить
+
+deploy:
+  provider: heroku
+  api_key:
+    - 40733276-e57b-4be9-b946-32ff28088d3c 
+  app: python-101-blog-api // заменить
+  on:
+    repo: bvc3at/python-101-exam-preparation // заменить
+  run:
+    - 'python src/blog_api/manage.py makemigrations' // за
+    - 'python src/blog_api/manage.py migrate'. // ме
+    - 'python src/blog_api/manage.py runserver' // нить

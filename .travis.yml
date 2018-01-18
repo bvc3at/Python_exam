@@ -1,0 +1,19 @@
+language: python
+python:
+  - "3.6"
+install:
+  - pip install -r exam/requirements.txt
+script:
+  - python exam/exam/manage.py test // заменить
+
+deploy:
+  provider: heroku
+  api_key:
+    - 40733276-e57b-4be9-b946-32ff28088d3c 
+  app: pythonmyexam 
+  on:
+    repo: DaryaZvyagina/Python_exam 
+  run:
+    - 'python exam/exam/manage.py makemigrations' // за
+    - 'python exam/exam/manage.py migrate'. // ме
+    - 'python exam/exam/manage.py runserver' // нить
